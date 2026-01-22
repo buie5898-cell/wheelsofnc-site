@@ -1,0 +1,245 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+}
+
+/* ===== Top bar (HOME / CONTACT) ===== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #222;
+  z-index: 1000;
+}
+
+.top-link {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+}
+
+.top-link:hover {
+  opacity: 0.7;
+}
+
+/* ===== Page layout ===== */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 110px 24px 110px; /* top clears header, bottom gives space above footer */
+  text-align: center;
+}
+
+/* slightly more vertical room on all pages */
+.page-home {
+  padding-top: 130px;
+}
+
+/* ===== Home page ===== */
+.home-logo-wrap {
+  margin-bottom: 70px;
+}
+
+.main-logo {
+  width: 360px;
+  max-width: 80%;
+  height: auto;
+}
+
+/* menu buttons */
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.primary-btn {
+  display: block;
+  width: 80%;
+  max-width: 640px;
+  padding: 18px 12px;
+  border-radius: 0;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+.primary-btn-dark {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== Generic titles ===== */
+.page-title {
+  font-size: 32px;
+  letter-spacing: 0.20em;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* ===== Car Meets & Races ===== */
+.page-meets .calendar-box {
+  width: 86%;
+  max-width: 760px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  padding: 8px;
+}
+
+/* let the page scroll naturally – no weird overflow here */
+.page-meets .calendar-inner {
+  width: 100%;
+  min-height: 420px;
+}
+
+/* ===== Member page ===== */
+.member-desc {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.center-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.primary-btn-light {
+  background: linear-gradient(90deg, #f0f0f0, #d9d9d9);
+  color: #000;
+  border-radius: 999px;
+  width: auto;
+  padding: 16px 60px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 18px 24px 26px;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-left {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-link i {
+  font-size: 16px;
+}
+
+.social-link:hover {
+  opacity: 0.75;
+}
+
+.footer-right {
+  font-size: 12px;
+  opacity: 0.8;
+  text-align: right;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 768px) {
+  .top-link {
+    font-size: 16px;
+    letter-spacing: 0.12em;
+  }
+
+  .main-logo {
+    width: 280px;
+  }
+
+  .primary-btn {
+    width: 86%;
+    font-size: 15px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .page {
+    padding: 110px 18px 110px;
+  }
+
+  .footer {
+    padding: 16px 18px 24px;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-link i {
+    font-size: 14px;
+  }
+
+  .footer-right {
+    font-size: 10px;
+  }
+}
